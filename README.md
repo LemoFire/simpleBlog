@@ -21,3 +21,7 @@
 3.修改 dbinfo.php 中的数据为对应数据库的信息
 
 4.运行 install.php 注册拥有管理员权限的用户就可以正常使用了
+
+### Demo
+
+[https://proj.ito.fun/simpleBlog/](https://proj.ito.fun/simpleBlog/)
