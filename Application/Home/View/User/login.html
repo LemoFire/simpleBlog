@@ -1,0 +1,21 @@
+<table style="height:100%; width:100%;" border="0">
+    <tr>
+        <td align="center" valign="middle">
+            <form method="post" action="{:U('User/checklogin')}" name="log">
+                <p>
+                    <input type="text" placeholder="用户名" name="uname" required>
+                    <br>
+                    <br/>
+                    <input type="password" placeholder="密码" name="upass" required>
+                    <br>
+                    <br/>
+                    <input type="text" placeholder="验证码" name="check"  />
+                    <br>
+                    <img title='看不清，换一张' id="checkpic" onclick="this.src='{:U('User/verify')}'" src="{:U('User/verify')}"/>
+                    <br>
+                    <input type="submit" value="登录" name="login">
+                </p>
+            </form>
+        </td>
+    </tr>
+</table>

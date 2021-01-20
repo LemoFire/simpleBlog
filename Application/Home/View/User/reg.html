@@ -1,0 +1,25 @@
+    <table style="height:100%; width:100%;" border="0">
+        <tr>
+            <td align="center" valign="middle">
+                <form method="post" action="{:U('User/adduser')}">
+                    <p>
+                      <input type="text" placeholder="用户名" name="uname" required="required">
+                    </p>
+                    <p>
+                      <input type="password" placeholder="密码" name="upass" required="required">
+                    </p>
+                    <p>
+                      <input type="password" placeholder="密码确认" name="repass" required="required">
+                    </p>
+                    <p>
+                      <input type="email" placeholder="邮件" name="email" required="required">
+                    </p>
+                    <p>
+                      <input type="text" placeholder="手机" name="phone" maxlength="11" required="required"><br>
+                      <br>
+                      <input type="submit" value="注册" name="sub">
+                    </p>
+                </form>
+            </td>
+        </tr>
+    </table>

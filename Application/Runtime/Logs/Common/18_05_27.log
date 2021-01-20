@@ -1,0 +1,24 @@
+[ 2018-05-27T17:39:19+08:00 ] ::1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000957s ]
+ERR: 无法加载模块:Login
+
+[ 2018-05-27T18:00:32+08:00 ] ::1 /user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+ERR: 无法加载模块:User
+
+[ 2018-05-27T18:00:34+08:00 ] ::1 /users
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+ERR: 无法加载模块:Users
+
+[ 2018-05-27T18:01:52+08:00 ] ::1 /user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+ERR: 无法加载模块:User
+

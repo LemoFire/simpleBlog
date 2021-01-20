@@ -1,0 +1,70 @@
+<table width="80%" border="1" align="center" borderColor=#33B552 cellpadding="20" cellspacing="30">
+    <th><a href="{:U('Post/topic',array('pid'=>I('get.pid')))}" style="font-size: 30px; color: #777;">{$tit}</a></th>
+    <tr>
+        <td height="48"><p>{$content}</p></td>
+    </tr>
+    <tr>
+        <td style="text-align: right">作者:{$uid|id2name}</td>
+    </tr>
+
+<if condition="(session(uid) eq 1) OR (session(uid) eq $uid)">
+    <tr>
+        <td>
+            <form action="{:U('Post/write',array('pid'=>I('get.pid')))}" method="post">
+                <input type="submit" value="编辑" name="edit">
+                <input type="submit" value="删除" name="del" >
+            </form>
+        </td>
+    </tr>
+</if>
+</table>
+<p>
+
+
+
+    <br>
+    <br>
+</p>
+<table width="50%" border="1" align="center" borderColor=#33B552 cellpadding="10" cellspacing="15">
+    <th colspan="5">评论区</th>
+    <if condition="!$list">
+        <tr><td><center>暂无评论</center></td></tr>
+    </if>
+<volist name="list" id="vo">
+        <tr>
+            <td colspan="5">{$vo.content}</td>
+        </tr>
+        <tr>
+            <td style="font-size: 10px">昵称:{$vo.gname}</td>
+            <td style="font-size: 10px">email:{$vo.gemail}</td>
+            <if condition="(session(uid) eq 1) OR (session(uid) eq $uid)">
+                <td style="font-size: 10px"><a href="{:U('Post/delcomment',array('cid'=>$vo['cid']))}">删除评论</a></td>
+            </if>
+        </tr>
+</volist>
+
+<if condition="strlen($page) gt 15">
+    <tr>
+            <td colspan="5" style="text-align: center">
+                {$page}
+            </td>
+    </tr>
+</if> 
+</table>
+
+<table align="center" style="width: 100%;border: 0; ">
+    <tr>
+        <td height="173" align="center" valign="middle">
+            <form action="{:U('Post/writecomment',array('pid'=>I('get.pid')))}" name="" method="post">
+                <p>提交评论</p>
+                <p>
+                    <input type="text" placeholder="昵称" size="30" name="gname" value="<?php if(session('usn')) echo session('usn'); else echo "";?>">
+                </p>
+                <p><input type="text" placeholder="email" size="30" name="gemail"></p>
+                <textarea cols="30" rows="3" placeholder="正文" name="content"></textarea>
+                <br>
+                <input type="submit" name="sub" value="提交">
+            </form>
+        </td>
+    </tr>
+</table>
