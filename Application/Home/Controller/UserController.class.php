@@ -39,7 +39,7 @@ class UserController extends Controller {
         }else{
             $User->upass=md5($User->upass);
             $User->add();
-            $this->success('注册成功',U('Index/Index'));
+            $this->success('注册成功',U('Index/index'));
             }
         }
     public function _before_login(){
@@ -70,7 +70,7 @@ class UserController extends Controller {
             session('uid',"$result[uid]");
             //$_SESSION['usn'] = $result['uname'];
             //$_SESSION['uid'] = $result['uid'];
-            $this->success('登陆成功',U('Index/Index'));
+            $this->success('登陆成功',U('Index/index'));
         }
         else $this->error('账号或密码错误');
     }
