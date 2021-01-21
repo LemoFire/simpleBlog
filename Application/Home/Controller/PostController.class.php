@@ -20,7 +20,7 @@ class PostController extends Controller {
         if($mode=='del'){
             $psm=M('post');
             $psm->delete("$pid");
-            $this->success('删除成功',U('Index/Index'));
+            $this->success('删除成功',U('Index/index'));
             exit();
         }
         $this->assign('tit',$tit);
@@ -50,7 +50,7 @@ class PostController extends Controller {
             $psm->create();
             $psm->uid=session('uid');
             $psm->add();
-            $this->success('写文成功',U('Index/Index'));
+            $this->success('写文成功',U('Index/index'));
         }
     }
     public function topic($pid=""){
